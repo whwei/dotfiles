@@ -7,7 +7,7 @@ local hyper = { "cmd", "ctrl", "alt" }
 local myKeys = {
 	-- app quick switch
 	hotkey.new(mod, "1", function()
-		hs.application.launchOrFocus("Alacritty")
+		hs.application.launchOrFocus("WezTerm")
 	end),
 	hotkey.new(mod, "2", function()
 		hs.application.launchOrFocus("Google Chrome")
