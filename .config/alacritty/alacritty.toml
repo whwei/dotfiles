@@ -1,0 +1,17 @@
+[env]
+term = "xterm-256color"
+
+[window]
+padding.x = 18
+padding.y = 18
+
+decorations = "Buttonless"
+
+opacity = 0.8
+blur = true
+
+option_as_alt = "Both"
+
+[font]
+normal.family = "MesloLGS Nerd Font Mono"
+size = 16
