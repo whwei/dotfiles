@@ -1,12 +1,3 @@
---- wezterm.lua
---- $ figlet -f small Wezterm
---- __      __      _
---- \ \    / /__ __| |_ ___ _ _ _ __
----  \ \/\/ / -_)_ /  _/ -_) '_| '  \
----   \_/\_/\___/__|\__\___|_| |_|_|_|
----
---- My Wezterm config file
-
 local wezterm = require("wezterm")
 local act = wezterm.action
 
@@ -20,7 +11,7 @@ end
 
 config.color_scheme = "Tokyo Night"
 config.font = wezterm.font_with_fallback({
-	{ family = "MesloLGS Nerd Font Mono", scale = 1.1, weight = "Medium" },
+	{ family = "Hack Nerd Font Mono", scale = 1.3, weight = "Medium" },
 	{ family = "FantasqueSansM Nerd Font", scale = 1.3 },
 })
 config.window_background_opacity = 0.9
