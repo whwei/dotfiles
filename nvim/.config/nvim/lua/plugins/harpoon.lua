@@ -40,21 +40,25 @@ return {
       end, { desc = 'Harpoon to file' .. n })
     end
 
-    vim.keymap.set('n', '<leader>h', function()
+    vim.keymap.set('n', '<leader>hh', function()
       toggle_telescope(harpoon:list())
     end, { desc = 'Open harpoon window' })
 
-    vim.keymap.set('n', '<leader>p', function()
+    vim.keymap.set('n', '<leader>hp', function()
       harpoon:list():prev()
     end, { desc = 'Harpoon previous buffer' })
 
-    vim.keymap.set('n', '<leader>n', function()
+    vim.keymap.set('n', '<leader>hn', function()
       harpoon:list():next()
     end, { desc = 'Harpoon next buffer' })
 
-    vim.keymap.set('n', '<leader>a', function()
-      harpoon:list():append()
+    vim.keymap.set('n', '<leader>ha', function()
+      harpoon:list():add()
     end, { desc = 'Harpoon file' })
+
+    vim.keymap.set('n', '<leader>hc', function()
+      harpoon:list():clear()
+    end, { desc = 'Harpoon file clear' })
 
     bindSelect(1)
     bindSelect(2)

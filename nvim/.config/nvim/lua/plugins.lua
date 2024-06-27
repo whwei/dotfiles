@@ -162,14 +162,6 @@ return {
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
-  -- Leap
-  {
-    'ggandor/leap.nvim',
-    config = function()
-      require('leap').create_default_mappings()
-    end,
-  },
-
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
     config = function()
@@ -186,20 +178,42 @@ return {
       -- - saiw) - [S]urround [A]dd [I]nner [W]ord [)]Paren
       -- - sd'   - [S]urround [D]elete [']quotes
       -- - sr)'  - [S]urround [R]eplace [)] [']
-      -- require('mini.surround').setup {
-      --   mappings = {
-      --     add = 'sa', -- Add surrounding in Normal and Visual modes
-      --     delete = 'sd', -- Delete surrounding
-      --     find = 'sf', -- Find surrounding (to the right)
-      --     find_left = 'sF', -- Find surrounding (to the left)
-      --     highlight = 'sh', -- Highlight surrounding
-      --     replace = 'sr', -- Replace surrounding
-      --     update_n_lines = 'sn', -- Update `n_lines`
-      --
-      --     suffix_last = 'l', -- Suffix to search with "prev" method
-      --     suffix_next = 'n', -- Suffix to search with "next" method
-      --   },
-      -- }
+      require('mini.surround').setup {
+        mappings = {
+          add = 'ys',
+          delete = 'ds',
+          find = '',
+          find_left = '',
+          highlight = '',
+          replace = 'cs',
+          update_n_lines = '',
+
+          -- Add this only if you don't want to use extended mappings
+          suffix_last = '',
+          suffix_next = '',
+        },
+        search_method = 'cover_or_next',
+        -- mappings = {
+        --   add = 'sa', -- Add surrounding in Normal and Visual modes
+        --   delete = 'sd', -- Delete surrounding
+        --   find = 'sf', -- Find surrounding (to the right)
+        --   find_left = 'sF', -- Find surrounding (to the left)
+        --   highlight = 'sh', -- Highlight surrounding
+        --   replace = 'sr', -- Replace surrounding
+        --   update_n_lines = 'sn', -- Update `n_lines`
+        --
+        --   suffix_last = 'l', -- Suffix to search with "prev" method
+        --   suffix_next = 'n', -- Suffix to search with "next" method
+        -- },
+      }
+      -- Remap adding surrounding to Visual mode selection
+      vim.keymap.del('x', 'ys')
+      vim.keymap.set('x', 'S', [[:<C-u>lua MiniSurround.add('visual')<CR>]], { silent = true })
+
+      -- Make special mapping for "add surrounding for line"
+      vim.keymap.set('n', 'yss', 'ys_', { remap = true })
+
+      require('mini.sessions').setup()
 
       require('mini.pairs').setup()
       -- ... and there is more!

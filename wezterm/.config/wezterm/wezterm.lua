@@ -14,8 +14,9 @@ config.font = wezterm.font_with_fallback({
 	{ family = "Hack Nerd Font Mono", scale = 1.3, weight = "Medium" },
 	{ family = "FantasqueSansM Nerd Font", scale = 1.3 },
 })
-config.window_background_opacity = 0.9
-config.macos_window_background_blur = 188
+config.window_background_opacity = 0.85
+config.text_background_opacity = 0.5
+config.macos_window_background_blur = 150
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "AlwaysPrompt"
 config.scrollback_lines = 3000
@@ -29,8 +30,8 @@ config.window_padding = {
 
 -- Dim inactive panes
 config.inactive_pane_hsb = {
-	saturation = 0.24,
-	brightness = 0.2,
+	saturation = 1,
+	brightness = 0.4,
 }
 
 -- Keys
@@ -82,7 +83,7 @@ config.keys = {
 	},
 	-- Key table for moving tabs around
 	{ key = "m", mods = "LEADER", action = act.ActivateKeyTable({ name = "move_tab", one_shot = false }) },
-	-- Or shortcuts to move tab w/o move_tab table. SHIFT is for when caps lock is on
+	-- Or shortcuts to move tab w/o move_tab table. SHIFT is for when caps lock is onml
 	{ key = "{", mods = "LEADER|SHIFT", action = act.MoveTabRelative(-1) },
 	{ key = "}", mods = "LEADER|SHIFT", action = act.MoveTabRelative(1) },
 

@@ -51,6 +51,18 @@ return {
       --  All the info you're looking for is in `:help telescope.setup()`
       --
       defaults = {
+        -- path_display = { 'smart' },
+        layout_config = {
+          vertical = {
+            width = 0.95,
+          },
+          horizontal = {
+            width = 0.95,
+          },
+        },
+        path_display = {
+          'shorten',
+        },
         mappings = {
           i = {
             ['<c-k>'] = actions.move_selection_previous,
