@@ -27,7 +27,7 @@ local myKeys = {
 		hs.window.focusedWindow():moveToUnit({ 0, 0, 1, 1 })
 	end),
 	hotkey.new(mod, "k", function()
-		hs.window.focusedWindow():moveToUnit({ 0.15, 0.15, 0.7, 0.7 })
+		hs.window.focusedWindow():moveToUnit({ 0.1, 0.1, 0.8, 0.8 })
 	end),
 	hotkey.new(mod, ",", function()
 		-- get the focused window

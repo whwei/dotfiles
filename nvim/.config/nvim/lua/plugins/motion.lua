@@ -1,27 +1,25 @@
 return {
-  -- {
-  --   'smoka7/hop.nvim',
-  --   version = '*',
-  --   opts = {
-  --     keys = 'etovxqpdygfblzhckisuran',
-  --   },
-  --   config = function()
-  --     local hop = require 'hop'
-  --     hop.setup()
-  --     local directions = require('hop.hint').HintDirection
-  --     vim.keymap.set('', 'f', function()
-  --       hop.hint_words { direction = directions.AFTER_CURSOR }
-  --     end, { remap = true })
-  --     vim.keymap.set('', 'F', function()
-  --       hop.hint_words { direction = directions.BEFORE_CURSOR }
-  --     end, { remap = true })
-  --   end,
-  -- },
   -- Leap
   {
     'ggandor/leap.nvim',
     config = function()
-      require('leap').create_default_mappings()
+      local leap = require 'leap'
+
+      leap.create_default_mappings()
+
+      leap.opts.case_sensitive = false
+
+      -- Define equivalence classes for brackets and quotes, in addition to
+      -- the default whitespace group.
+      leap.opts.equivalence_classes = { ' \t\r\n', '([{', ')]}', '\'"`' }
+
+      -- Override some old defaults - use backspace instead of tab (see issue #165).
+      leap.opts.special_keys.prev_target = '<backspace>'
+      leap.opts.special_keys.prev_group = '<backspace>'
+
+      -- Use the traversal keys to repeat the previous motion without explicitly
+      -- invoking Leap.
+      require('leap.user').set_repeat_keys('<enter>', '<backspace>')
     end,
   },
 }
