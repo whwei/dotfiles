@@ -11,4 +11,5 @@ return {
     config = true,
   },
   { 'sindrets/diffview.nvim', dependencies = 'nvim-lua/plenary.nvim' },
+  { 'akinsho/git-conflict.nvim', version = '*', config = true },
 }

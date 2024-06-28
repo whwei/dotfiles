@@ -1,5 +1,4 @@
 return {
-  -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
 
   -- UI
@@ -73,13 +72,6 @@ return {
     end,
   },
 
-  -- NOTE: Plugins can specify dependencies.
-  --
-  -- The dependencies are proper plugin specifications as well - anything
-  -- you do for a plugin at the top level, you can do for a dependency.
-  --
-  -- Use the `dependencies` key to specify the dependencies of a particular plugin
-
   { -- Autoformat
     'stevearc/conform.nvim',
     lazy = false,
@@ -125,8 +117,6 @@ return {
   },
 
   'mg979/vim-visual-multi',
-
-  { 'akinsho/git-conflict.nvim', version = '*', config = true },
 
   {
     'ahmedkhalf/project.nvim',
@@ -193,18 +183,6 @@ return {
           suffix_next = '',
         },
         search_method = 'cover_or_next',
-        -- mappings = {
-        --   add = 'sa', -- Add surrounding in Normal and Visual modes
-        --   delete = 'sd', -- Delete surrounding
-        --   find = 'sf', -- Find surrounding (to the right)
-        --   find_left = 'sF', -- Find surrounding (to the left)
-        --   highlight = 'sh', -- Highlight surrounding
-        --   replace = 'sr', -- Replace surrounding
-        --   update_n_lines = 'sn', -- Update `n_lines`
-        --
-        --   suffix_last = 'l', -- Suffix to search with "prev" method
-        --   suffix_next = 'n', -- Suffix to search with "next" method
-        -- },
       }
       -- Remap adding surrounding to Visual mode selection
       vim.keymap.del('x', 'ys')
@@ -213,48 +191,9 @@ return {
       -- Make special mapping for "add surrounding for line"
       vim.keymap.set('n', 'yss', 'ys_', { remap = true })
 
-      require('mini.sessions').setup()
-
       require('mini.pairs').setup()
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
   },
-
-  -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
-  -- init.lua. If you want these files, they are in the repository, so you can just download them and
-  -- place them in the correct locations.
-
-  -- NOTE: Next step on your Neovim journey: Add/Configure additional plugins for Kickstart
-  --
-  --  Here are some example plugins that I've included in the Kickstart repository.
-  --  Uncomment any of the lines below to enable them (you will need to restart nvim).
-  --
-  -- require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.lint',
-  -- require 'kickstart.plugins.autopairs',
-
-  -- plugins
-  -- require 'plugins.neo-tree',
-  -- require 'plugins.lualine',
-  -- require 'plugins.fold',
-  -- require 'plugins.indent_line',
-  -- require 'plugins.harpoon',
-  -- require 'plugins.bg',
-  -- require 'plugins.git',
-  -- require 'plugins.gitsigns',
-  -- require 'plugins.treesitter',
-  -- require 'plugins.telescope',
-  -- require 'plugins.dressing',
-  -- require 'plugins.cmp',
-  -- require 'plugins.lspconfig',
-  -- require 'plugins.toggleterm',
-  -- require 'plugins.searchbox',
-
-  -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
-  --    This is the easiest way to modularize your config.
-  --
-  --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
-  --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
-  -- { import = 'custom.plugins' },
 }
