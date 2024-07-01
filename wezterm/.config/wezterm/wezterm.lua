@@ -14,8 +14,8 @@ config.font = wezterm.font_with_fallback({
 	{ family = "Hack Nerd Font Mono", scale = 1.3, weight = "Bold" },
 	{ family = "FantasqueSansM Nerd Font", scale = 1.3 },
 })
-config.window_background_opacity = 0.92
-config.macos_window_background_blur = 20
+config.window_background_opacity = 0.93
+config.macos_window_background_blur = 50
 config.window_decorations = "RESIZE"
 config.window_close_confirmation = "AlwaysPrompt"
 config.scrollback_lines = 3000
