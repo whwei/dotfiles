@@ -21,9 +21,9 @@ config.window_close_confirmation = "AlwaysPrompt"
 config.scrollback_lines = 3000
 config.default_workspace = "main"
 config.window_padding = {
-	left = "0cell",
+	left = "1cell",
 	right = "0cell",
-	top = "0cell",
+	top = "0.5cell",
 	bottom = "0cell",
 }
 
@@ -125,7 +125,7 @@ config.tab_bar_at_bottom = false
 wezterm.on("update-status", function(window, pane)
 	-- Workspace name
 	local stat = window:active_workspace()
-	local stat_color = "#f7768e"
+	local stat_color = "#00ffaa"
 	-- It's a little silly to have workspace name all the time
 	-- Utilize this to display LDR or current key table name
 	if window:active_key_table() then
@@ -176,26 +176,15 @@ wezterm.on("update-status", function(window, pane)
 	window:set_right_status(wezterm.format({
 		-- Wezterm has a built-in nerd fonts
 		-- https://wezfurlong.org/wezterm/config/lua/wezterm/nerdfonts.html
-		{ Text = wezterm.nerdfonts.md_folder .. "  " .. cwd },
+		{ Text = wezterm.nerdfonts.md_folder .. " " .. cwd },
 		{ Text = " | " },
 		{ Foreground = { Color = "#e0af68" } },
-		{ Text = wezterm.nerdfonts.fa_code .. "  " .. cmd },
+		{ Text = wezterm.nerdfonts.fa_code .. " " .. cmd },
 		"ResetAttributes",
 		{ Text = " | " },
-		{ Text = wezterm.nerdfonts.md_clock .. "  " .. time },
+		{ Text = wezterm.nerdfonts.md_clock .. " " .. time },
 		{ Text = "  " },
 	}))
 end)
-
---[[ Appearance setting for when I need to take pretty screenshots
-config.enable_tab_bar = false
-config.window_padding = {
-  left = '0.5cell',
-  right = '0.5cell',
-  top = '0.5cell',
-  bottom = '0cell',
-
-}
---]]
 
 return config
