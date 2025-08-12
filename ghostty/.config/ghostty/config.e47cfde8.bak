@@ -40,4 +40,3 @@ macos-titlebar-style = transparent
 
 # keybindings
 keybind = super+s>r=reload_config
-keybind = shift+enter=text:\n
