@@ -2,7 +2,7 @@
 font-size = 20
 font-style = medium
 bold-is-bright = true
-theme = NvimDark
+theme = catppuccin-macchiato
 font-family = "Monaco"
 
 # cursor
