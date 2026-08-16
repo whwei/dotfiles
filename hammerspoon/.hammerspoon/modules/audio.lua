@@ -1,5 +1,0 @@
-hs.hotkey.bind({ "cmd", "shift" }, "b", function()
-	hs.execute("/opt/homebrew/bin/SwitchAudioSource -n")
-	local output = hs.execute("/opt/homebrew/bin/SwitchAudioSource -c")
-	hs.alert.show("switch to " .. output:match("[^\n]*"))
-end)
