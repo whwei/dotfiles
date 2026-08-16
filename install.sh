@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # One-shot setup for a fresh macOS machine (Apple Silicon).
 #
-#   git clone git@github.com:whwei/dotfile.git ~/dotfile
+#   git clone git@github.com:whwei/dotfiles.git ~/dotfile
 #   ~/dotfile/install.sh
 #
 set -euo pipefail
