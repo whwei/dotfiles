@@ -14,8 +14,6 @@ brew "cmake"
 brew "fd"
 # SDL2 compatibility layer that uses SDL3 behind the scenes
 brew "sdl2-compat"
-# Play, record, convert, and stream select audio and video codecs
-brew "ffmpeg"
 # Play, record, convert, and stream many audio and video codecs
 brew "ffmpeg-full"
 # Command-line fuzzy finder written in Go
@@ -26,10 +24,6 @@ brew "gh"
 brew "git"
 # ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
 brew "libheif"
-# Image processing tools collection
-brew "graphicsmagick"
-# Tools and libraries to manipulate images in select formats
-brew "imagemagick"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick-full"
 # Lightweight and flexible command-line JSON processor
@@ -46,14 +40,8 @@ brew "pipx"
 brew "pnpm"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
-# Cross-platform library for audio I/O
-brew "portaudio"
-# Theme for zsh
-brew "powerlevel10k"
 # Protocol buffers (Google's data interchange format)
 brew "protobuf"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.10"
 # SVG rendering tool and library
 brew "resvg"
 # Search tool like grep and The Silver Searcher
@@ -82,9 +70,6 @@ brew "anomalyco/tap/opencode"
 brew "supabase/tap/supabase"
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "nikitabobko/tap/aerospace"
-# GPU-accelerated terminal emulator
-# Automatic tiling window manager similar to xmonad
-cask "amethyst"
 # Configuration manager for AI coding agents
 cask "cc-switch"
 # OpenAI's coding agent that runs in your terminal
@@ -101,7 +86,6 @@ cask "localsend"
 cask "lyric-fever"
 # AI coding agent desktop client
 cask "opencode-desktop"
-# GPU-accelerated cross-platform terminal emulator and multiplexer
 vscode "anthropic.claude-code"
 vscode "arcanis.vscode-zipfs"
 vscode "bierner.markdown-mermaid"
@@ -152,5 +136,4 @@ npm "mcporter"
 npm "pi-evidence-research"
 npm "reasonix"
 npm "remodex"
-npm "undici"
 npm "wrangler"
