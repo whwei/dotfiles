@@ -1,0 +1,7 @@
+[http]
+	postBuffer = 524288000
+[user]
+	name = whw
+	email = whw.0922@gmail.com
+[init]
+	defaultBranch = main

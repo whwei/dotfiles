@@ -1,0 +1,15 @@
+@dokploy/cli
+@earendil-works/pi-coding-agent
+@fission-ai/openspec
+@github/copilot
+@higgsfield/cli
+@jackwener/opencli
+@kayvan/markdown-tree-parser
+@monid-ai/cli
+@musistudio/claude-code-router
+gsd-pi
+mcporter
+reasonix
+remodex
+undici
+wrangler
